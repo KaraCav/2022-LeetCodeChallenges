@@ -15,3 +15,18 @@ var twoSum = function(nums, target) {
 
 twoSum([1,2,3,4], 6); // should return [1,3]
 //twoSum([2,3,5,6], 11); // should return [2,3]
+
+// 2. Find the mean of two arrays
+var findMeanSortedArrays = function(nums1, nums2) {
+    let arrSum1 = nums1.reduce((sum, i) => sum + i);
+    let arrSum2 = nums2.reduce((sum, i) => sum +i);
+    let totalSum = arrSum1 + arrSum2;
+    let divisor = nums1.length + nums2.length;
+    console.log(totalSum/divisor);
+    return totalSum/divisor;
+};
+
+findMeanSortedArrays([1,2,3], [7,7,8]);
+
+// 3. Find the median of two arrays- if there is an even number of items, return the average of the two middle numbers
+

@@ -29,4 +29,15 @@ var findMeanSortedArrays = function(nums1, nums2) {
 findMeanSortedArrays([1,2,3], [7,7,8]);
 
 // 3. Find the median of two arrays- if there is an even number of items, return the average of the two middle numbers
-
+var findMedianSortedArrays = function(nums1, nums2) {
+    let combinedArr = nums1.concat(nums2);
+    combinedArr.sort((a,b) => a-b);
+    if(combinedArr.length % 2 == 0) {
+        let middle = combinedArr.length/2;
+        return (combinedArr[middle] + combinedArr[middle-1])/2;
+    }
+    else {
+        let middle = (combinedArr.length -1) /2;
+        return combinedArr[middle];
+    }
+}
